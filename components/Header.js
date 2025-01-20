@@ -9,6 +9,7 @@ function Header() {
                 <Link href="/" className="hover:text-yellow-300 transition-colors duration-300">Home</Link>
                 <Link href="/product" className="hover:text-yellow-300 transition-colors duration-300">productos</Link>
                 <Link href="/admin" className="hover:text-yellow-300 transition-colors duration-300">admin</Link>
+                <Link href="/contacto" className="hover:text-yellow-300 transition-colors duration-300">contacto</Link>
                 <Link href="/carrito" className="hover:text-yellow-300 transition-colors duration-300">
                     <ShoppingCart className="w-6 h-6" />
                 </Link>
