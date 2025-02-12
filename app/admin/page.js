@@ -42,38 +42,38 @@ function AdminPage() {
     return (
         <>
             <PageTitle>Admin Panel</PageTitle>
-            <form noValidate className="flex flex-col mx-auto space-y-12" onSubmit={handleSubmit}>
-                <fieldset className="grid grid-cols-4 gap-6">
-                    <div className="space-y-2 col-span-full lg:col-span-1">
-                        <p className="font-medium">Carga de producto</p>
-                        <p className="text-xs">Aquí puedes cargar tus productos de manera divertida (?</p>
+            <form noValidate className="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg" onSubmit={handleSubmit}>
+                <fieldset className="space-y-6">
+                    <div className="space-y-2">
+                        <p className="text-xl font-semibold">Carga de producto</p>
+                        <p className="text-sm text-gray-500">Nuevo producto</p>
                     </div>
-                    <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-                        <div className="col-span-full sm:col-span-3">
-                            <label htmlFor="name" className="text-sm">Nombre de producto</label>
+                    <div className="space-y-4">
+                        <div>
+                            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nombre de producto</label>
                             <input 
                                 name="name" 
                                 id="name" 
                                 type="text" 
                                 placeholder="Ej.: Monitor de pantalla" 
-                                className="w-full rounded-md focus:ring focus:ring-opacity-75 text-black border-primary/20 border bg-white p-2" 
+                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
                                 onChange={handleChange} 
                                 value={nombre}
                             />
                         </div>
-                        <div className="col-span-full sm:col-span-3">
-                            <label htmlFor="price" className="text-sm">Precio (en pesos)</label>
+                        <div>
+                            <label htmlFor="price" className="block text-sm font-medium text-gray-700">Precio (en pesos)</label>
                             <input 
                                 name="price" 
                                 id="price" 
                                 type="text" 
                                 placeholder="Ej.: $100" 
-                                className="w-full rounded-md focus:ring focus:ring-opacity-75 text-black border-primary/20 border bg-white p-2" 
+                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
                                 onChange={handleChange} 
                                 value={precio}
                             />
                         </div>
-                        <Button className="col-span-full sm:col-span-3">Crear producto</Button>
+                        <Button className="w-full py-2 mt-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-md hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">Crear producto</Button>
                     </div>
                 </fieldset>
             </form>

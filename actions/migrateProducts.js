@@ -1,6 +1,6 @@
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase/config";
-import { productos } from "@/assets/products";
+import { productos } from "@/public/assets/products";
 
 export async function migrateProducts() {
     const productsCollection = collection(db, "products")
